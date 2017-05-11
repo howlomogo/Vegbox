@@ -1,0 +1,585 @@
+//- Move these to global settings
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'PT Serif', serif;
+	line-height: normal !important;
+}
+
+p, span, button, a {
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	line-height: normal !important;
+}
+
+h1 {
+	font-size: 2.25rem;
+}
+
+h2 {
+	font-size: 1.75rem;
+}
+
+// Spacing
+.u-padding {
+	&--tiny {
+			padding: $global-spacing--tiny;
+	}
+
+	&--small {
+			padding: $global-spacing--small;
+	}
+
+	&--normal {
+			padding: $global-spacing--normal;
+	}
+
+	&--large {
+			padding: $global-spacing--large;
+	}
+
+	&--huge {
+			padding: $global-spacing--huge;
+	}
+}
+
+//- Global Font colors
+body {
+	color: $font-color;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid #ffffff;
+}
+
+// Wine Preview Sections
+
+.wine-preview--img {
+	position: absolute;
+	max-width: 190px;
+	max-height: 70%;
+	top: 50%;
+	left: 50%;
+	transform: translate(calc(-50% + 12px), -50%);
+	z-index:1;
+}
+
+.wine-preview--text-container {
+	padding: $global-spacing--huge 0px;
+	padding-left: 120px;
+	&.isflipped {
+		padding-right: 144px;
+		padding-left: 0px;
+	}
+
+    @include mq($until: tablet) {
+    	padding: $global-spacing--huge $global-spacing--large !important;
+    }
+
+    @include mq($until: mobile) {
+    	padding: $global-spacing--huge 0px !important;
+    }
+}
+
+.wine-preview--section {
+	position: relative;
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+
+.wine-preview--text {
+	padding: $global-spacing--normal;
+	background-color: rgba(0,0,0,0.5);
+	// background-color: white;
+	margin-bottom: $global-spacing--normal;
+	color: #ffffff !important;
+	// color: $font-color;
+
+	h2 {
+		letter-spacing: 12px;
+		margin-bottom: $global-spacing--tiny /2;
+	}
+
+	h4 {
+		margin-bottom: $global-spacing--tiny;
+		font-weight: 400;
+		font-style: italic;
+	}
+
+	p {
+		font-size: 14px;
+		margin-bottom: $global-spacing--tiny;
+		font-weight: 300;
+	}
+
+	hr {
+		margin-bottom: $global-spacing--tiny /2;
+		border-top: 1px solid $font-color;
+	}
+}
+
+.o-layout--stretch {
+  display: flex;
+  flex-wrap: wrap;
+
+  > .o-layout__item {
+    display: flex;
+  }
+
+}
+
+//- Events Section
+.events--section {
+
+	margin-bottom: $global-spacing--large;
+    @include mq($until: tablet) {
+    	display: none;
+    }
+}
+
+.event-box--container {
+    padding-top: 58px;
+	width: 100%;
+	height:190px;
+	position: relative;
+	background-size: cover;
+}
+
+.events-overlay {
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.events-box--bottom {
+	position: relative;
+	background-color: $color-grey-lightest;
+	padding: $global-spacing--normal $global-spacing--tiny $global-spacing--tiny;
+	text-align: center;
+
+	span {
+		margin-bottom: 0px;
+	}
+
+	.ion {
+		padding-right: $global-spacing--tiny / 2;
+	}
+}
+
+.events-box--text {
+    position: relative;
+    padding: $global-spacing--tiny;
+    text-align: center;
+    color: $font-color;
+    background-color: #ffffff;
+
+    h5 {
+    	margin-bottom: 0px;
+	    font-weight: 300;
+	    letter-spacing: 4px;
+    }
+}
+
+.events-box--pointer {
+	transition: all 0.5s;
+	opacity: 0;
+	width: 0;
+	height: 0;
+	border-left: 16px solid transparent;
+	border-right: 16px solid transparent;
+	border-top: 20px solid $color-grey-lightest;
+
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 100%);
+
+    &.is-active {
+    	opacity: 1;
+    }
+}
+
+.events-box--button {
+	position: absolute;
+	padding: $global-spacing--tiny /2 $global-spacing--small;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: none !important;
+	outline: none;
+}
+//- Events Section
+
+.calender-container {
+	display: inline-block;
+    margin-bottom: 16px;
+	.ion {
+		padding-right: $global-spacing--tiny / 2;
+	    display: inline-block;
+	    font-size: 22px;
+	    vertical-align: middle;
+	}
+
+	span {
+	    display: inline-block;
+	    vertical-align: middle;
+	    font-size: 14px;
+	    font-weight: 400;
+	}
+}
+
+//- Showcase Section
+
+.events-showcase--container {
+	overflow: hidden;
+	display: none;
+	margin-bottom: 5px;
+
+	&.is-active {
+		display: block;
+	}
+
+    @include mq($until: tablet) {
+    	display: block !important;
+    }
+}
+
+.showcase-text--container {
+	padding: $global-spacing--huge 0px;
+	width:100%;
+
+	h2 {
+		letter-spacing: 1px;
+		margin-bottom: $global-spacing--tiny /2;
+		animation-delay: 0.3s;
+	}
+
+	hr {
+		margin-bottom: $global-spacing--tiny;
+		border-top: 1px solid $font-color;
+		animation-delay: 0.3s;
+		max-width: 90px;
+
+	    @include mq($until: tablet) {
+			margin: 0 auto $global-spacing--tiny auto;
+	    }
+	}
+
+	.calender-container {
+		animation-delay: 0.6s
+	}
+
+	p {
+		font-size:14px;
+		margin-bottom: $global-spacing--normal;
+		font-weight: 300;
+		animation-delay: 0.9s;
+	}
+
+	button {
+		animation-delay: 1.2s;
+	}
+
+    @include mq($until: tablet) {
+    	background-color: #ffffff;
+		padding: $global-spacing--large;
+		text-align: center;
+    }
+
+    @include mq($until: mobile) {
+		padding: $global-spacing--normal;
+    }
+}
+
+.showcase--background-img {
+	position: absolute;
+	top:0;
+	bottom: 0;
+	z-index: 0;
+	right: 0;
+	left:30%;
+	background-size: cover;
+	background-position: center;
+
+	&.isflipped {
+		left: 0;
+		right: 30%;
+	}
+
+    @include mq($until: tablet) {
+    	left: 0 !important;
+    	right: 0 !important;
+    }
+}
+
+.showcase--background-filler {
+	width: 20%;
+	background-color:#ffffff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 0;
+
+	&.isflipped {
+		left: auto;
+		right: 0;
+	}
+
+    @include mq($until: tablet) {
+    	display: none;
+    }
+}
+
+.showcase-text--layout__item {
+	position: relative;
+	background-color: #ffffff;
+
+    @include mq($until: tablet) {
+    	padding: $global-spacing--huge;
+		padding-right: 40px;
+    	background-color: transparent;
+    }
+
+    @include mq($until: mobile) {
+		padding: $global-spacing--huge $global-spacing--small;
+		padding-right: 0px;
+    }
+}
+//- Showcase Section
+
+
+
+.wine-triangle {
+	position: absolute;
+	top:0;
+	bottom:0;
+	height:100%;
+	transform: translate(-100%, 0%);
+	left:1px;
+
+	&.isflipped {
+		left: auto;
+		right: 0;
+		-webkit-transform: scaleX(-1) translate(-100%, 0%);
+		transform: scaleX(-1) translate(-100%, 0%);
+		left:auto;
+		right: 1px;
+	}
+
+	&.isshowcase {
+		left: auto;
+		right: 0;
+		-webkit-transform: scaleX(-1) translate(-100%, 0%);
+		transform: scaleX(-1) scaleY(-1) translate(-100%, 0%);
+		left:auto;
+		right: 1px;
+	}
+
+    @include mq($until: tablet) {
+    	display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- Banner css needs to be looked at.
+.banner-content {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	width: 100%;
+	text-align: center;
+	padding: $global-spacing--normal;
+	padding-bottom: $global-spacing--huge;
+
+	img {
+		margin-bottom: $global-spacing--small;
+		max-width: 380px;
+		width: 100%;
+	}
+}
+
+
+
+.banner-line {
+	width: 80%;
+	margin: 0 auto $global-spacing--tiny auto;
+	max-width: 180px;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.banner-sub-title {
+	font-size: 24px;
+	color: #ffffff;
+	font-style: italic;
+	margin-bottom: 0px;
+	font-weight: 400;
+	letter-spacing: 0.9px;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+
+.section-header {
+	padding: $global-spacing--huge;
+	text-align: center;
+
+	&--title {
+			margin-bottom: $global-spacing--tiny;
+	}
+
+	&--line {
+			width: 70px;
+			margin: 0 auto $global-spacing--tiny/2 auto;
+	border-top: 1px solid $font-color;
+	}
+
+	&--star-container {
+			margin-bottom: $global-spacing--tiny;
+			font-size: 22px;
+	}
+
+    @include mq($until: tablet) {
+    	padding: $global-spacing--huge $global-spacing--tiny;
+    }
+}
+
+.footer {
+	background-color: #222222;
+	text-align: center;
+	color: #ffffff;
+	padding: $global-spacing--huge;
+
+	&--line {
+		width: 1px;
+		background-color: #ffffff;
+		position: absolute;
+		height: 50%;
+		top: 50%;
+		transform: translate(0%, calc(-50% - 28px));
+
+		&-first {
+			left: 33.33333%;
+		}
+
+		&-second {
+			left: 66.66666%;
+		}
+
+		@include mq($until: tablet) {
+			display: none;
+    	}
+	}
+
+	&--logo {
+		width: 100%;
+		max-width: 180px;
+		margin-bottom: $global-spacing--tiny;
+	}
+
+	p, a {
+		margin-bottom: 4px;
+		font-size: 14px;
+		font-weight: bold;
+		letter-spacing: 1px;
+		line-height: 20px;
+		display: block;
+	}
+
+	a {
+		cursor: pointer;
+		margin-bottom: $global-spacing--tiny/2;
+
+		&:hover {
+			-webkit-animation: pulse 0.5s;
+	    	animation: pulse 0.5s;
+		}
+	}
+
+	.ion {
+		font-size: 28px;
+		padding: 0px $global-spacing--tiny/2;
+		margin-bottom: $global-spacing--tiny;
+		cursor: pointer;
+
+		&:hover {
+			-webkit-animation: pulse 0.5s;
+	    	animation: pulse 0.5s;
+		}
+	}
+
+	input {
+		display: block;
+		margin: 0 auto;
+		margin-bottom: $global-spacing--tiny;
+		padding: $global-spacing--tiny/2;
+		font-size: 14px;
+		width: 100%;
+		max-width: 200px;
+	}
+
+
+	@include mq($until: tablet) {
+		.o-layout__item {
+			margin-bottom: $global-spacing--normal;
+		}
+	}
+}
+
+.e-button {
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 0.9px;
+	background-color: transparent;
+	padding: 10px 20px;
+	border: 3px solid $font-color;
+	color: $font-color;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+    outline: none;
+
+	&:hover {
+		background-color: $font-color !important;
+		color: #ffffff !important;
+	}
+
+	&.inverted {
+		border: 3px solid #ffffff;
+		color: #ffffff;
+
+		&:hover {
+			background-color: #ffffff;
+			color: $font-color;
+		}
+	}
+
+	&.white {
+		font-size: 12px;
+		padding: 12px 24px;
+		letter-spacing: 0.5px;
+		background-color: #ffffff;
+	}
+
+	&.is-active {
+		background-color: $font-color !important;
+		color: #ffffff !important;
+	}
+}

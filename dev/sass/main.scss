@@ -1,0 +1,35 @@
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Fredericka the Great', cursive;
+}
+
+p,a {
+	
+}
+
+.hero-banner {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	background-image: url("../assets/banner-change.jpg");
+	background-size: cover;
+	background-position: center;
+
+	&--inner {
+		position: absolute;
+	    width: 768px;
+	    max-width: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin-top: 47px; //- for navigation
+	}
+}
+
+.navbar-toggler {
+	top: 28px;
+}
+
+.box--dashed {
+	padding: 24px;
+	background-color: rgba(255,255,255,0.9);
+}
