@@ -9,13 +9,13 @@ html
 				.box--dashed
 					h1 TOP QUALITY FRUIT AND VEGETABLES
 					p DELIVERED STRAIGHT TO YOUR DOOR
-					button CHOOSE A BOX
+				button CHOOSE A BOX
 
-		section.text-center
+		section.section.text-center
 			.container
 				.row
 					.col-md-12
-						h1 HOW IT WORKS
+						h1.mb-6 HOW IT WORKS
 
 				.row
 					.col-md-4
@@ -30,11 +30,11 @@ html
 
 
 
-		section(style="background-image: url('./assets/ordernow.jpg'); background-size: cover;")
+		section.section.text-center(style="background-image: url('./assets/ordernow.jpg'); background-size: cover;")
 			.container
 				.row
 					.col-md-12
-						div
+						.box--dashed
 							h1 ORDER NOW AND RECIEVE 
 								span 50% OFF
 								| YOUR FIRST BOX
@@ -43,7 +43,7 @@ html
 						button GET STARTED
 
 
-		section.text-center
+		section.section.text-center
 			.container
 				.row
 					.col-md-12
@@ -77,11 +77,11 @@ html
 						p We OFFER FREE NEXT DAY DELIVERY ON ALL OF OUR BOXES!
 
 
-		section(style="background-image: url('./assets/mib-bg.jpg'); background-size: cover;")
+		section.section(style="background-image: url('./assets/mib-bg.jpg'); background-size: cover;")
 			.container
 				.row
 					.col-md-6
-						div
+						.box--dashed
 							h1 MADE IN BRITAIN
 							p WE ONLY SUPPLY THE 
 								span BEST HOMEGROWN PRODUCE
@@ -92,43 +92,51 @@ html
 							button MORE INFO
 
 
-		section.text-center
+		section.section.text-center
 			.container
 				.row
 					.col-md-12
-						h1 WHAT OUR CUSTOMERS SAY
+						h1.mb-6 WHAT OUR CUSTOMERS SAY
 
 				.row
 					.col-md-4
-						h1 "
-						p WONDERFUL FOOD, VERY FRESH AND SUBERB QUALITY, WOULD BUY AGAIN!
-						p John Lennon
+						.testimonial--single
+							h1 "
+							p WONDERFUL FOOD, VERY FRESH AND SUBERB QUALITY, WOULD BUY AGAIN!
+							p John Lennon
 					.col-md-4
-						h1 "
-						p HANDS DOWN, THE BEST STEAK I HAVE EVER HAD! WOULD BUY AGAIN!
-						p Bob Green
+						.testimonial--single
+							h1 "
+							p HANDS DOWN, THE BEST STEAK I HAVE EVER HAD! WOULD BUY AGAIN!
+							p Bob Green
 
 					.col-md-4
-						h1 "
-						p BEST SMOKED GAMMON I HAVE EVER COOKED WITH, ITS MY FAVORITE!
-						p Sally Robinson
+						.testimonial--single
+							h1 "
+							p BEST SMOKED GAMMON I HAVE EVER COOKED WITH, ITS MY FAVORITE!
+							p Sally Robinson
 
-				.row
+				.row.footer--social-links
 					.col-md-12
-						img(src="./assets/icon-fb.svg")
-						img(src="./assets/icon-twi.svg")
-						img(src="./assets/icon-yt.svg")
-						img(src="./assets/icon-inst.svg")
-						img(src="./assets/icon-goog.svg")
+						a.d-inline-block
+							img(src="./assets/icon-fb.svg")
+						a.d-inline-block
+							img(src="./assets/icon-twi.svg")
+						a.d-inline-block
+							img(src="./assets/icon-yt.svg")
+						a.d-inline-block
+							img(src="./assets/icon-inst.svg")
+						a.d-inline-block
+							img(src="./assets/icon-goog.svg")
 
-				.row
+				.row.footer--links
 					.col-md-12
-						p.d-inline-block HOME
-						p.d-inline-block ABOUT
-						p.d-inline-block FAQ
-						p.d-inline-block OUT SUPPLIERS
-						p.d-inline-block PRIVACY POLICY
-						p.d-inline-block CONTACT
+						a.d-inline-block HOME
+						a.d-inline-block ABOUT
+						a.d-inline-block FAQ
+						a.d-inline-block OUT SUPPLIERS
+						a.d-inline-block PRIVACY POLICY
+						a.d-inline-block CONTACT
 
 				.row
 					.col-md-12

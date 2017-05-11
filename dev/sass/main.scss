@@ -1,9 +1,15 @@
+@import "bootstrap";
+
 h1,h2,h3,h4,h5,h6 {
 	font-family: 'Fredericka the Great', cursive;
 }
 
 p,a {
-	
+	font-family: 'Amatica SC', cursive;
+}
+
+.section {
+	@extend .p-7;
 }
 
 .hero-banner {
@@ -16,7 +22,7 @@ p,a {
 
 	&--inner {
 		position: absolute;
-	    width: 768px;
+	    width: 690px;
 	    max-width: 100%;
 		top: 50%;
 		left: 50%;
@@ -30,6 +36,35 @@ p,a {
 }
 
 .box--dashed {
-	padding: 24px;
+	@extend .p-4;
 	background-color: rgba(255,255,255,0.9);
+    outline: 2px dashed #BBBBBB;
+    outline-offset: -8px;
+}
+
+
+//- Testimonial
+.testimonial--single {
+	@extend .mb-7;
+	@extend .p-2;
+}
+
+//- Footer
+.footer--links {
+	a {
+		cursor: pointer;
+		@extend .mb-2;
+		@extend .mx-2;
+		font-weight: bold;
+	}
+}
+
+.footer--social-links {
+	a {
+		cursor: pointer;
+		@extend .mb-4;
+		margin-left: 12px;
+		margin-right: 12px;
+		font-weight: bold;
+	}
 }
