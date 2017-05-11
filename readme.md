@@ -1,4 +1,4 @@
-# Kingmakers Website
+# Vegbox Website
 
 Setup:
 
