@@ -44,4 +44,8 @@ $spacers: (
     x: ($spacer-x * 8),
     y: ($spacer-y * 8)
   ),
+  9: (
+    x: ($spacer-x * 10),
+    y: ($spacer-y * 10)
+  ),
 ) !default;

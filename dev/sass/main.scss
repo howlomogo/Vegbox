@@ -1,15 +1,53 @@
 @import "bootstrap";
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2 {
 	font-family: 'Fredericka the Great', cursive;
+}
+
+h3,h4,h5,h6 {
+	font-family: 'Amatica SC', cursive;
 }
 
 p,a {
 	font-family: 'Amatica SC', cursive;
 }
 
+.btn {
+	background-color: #87B877;
+	border: none;
+	outline: none;
+	font-family: 'Amatica SC', cursive;
+	font-size: 28px;
+	color: #ffffff;
+	line-height: normal;
+	padding: 8px 42px 12px;
+
+}
+
 .section {
-	@extend .p-7;
+	position: relative;
+	@extend .py-8;
+
+	&.x-pad {
+		@extend .py-9;
+	}
+}
+
+.section-mask {
+	position: absolute;
+	bottom:0;
+	width: 100%;
+	right: 0;
+	left: 0;
+	margin-bottom: -2px;
+
+	&.flipped {
+		transform: scaleY(-1);
+		margin-bottom: auto;
+		margin-top: -2px;
+		top:0;
+		bottom: auto;
+	}
 }
 
 .hero-banner {
@@ -43,10 +81,35 @@ p,a {
 }
 
 
+//- Our Boxes
+.our-boxes {
+
+}
+
+.our-boxes--delivery {
+	img {
+		max-width: 100px;
+		@extend .mb-2;
+	}
+}
+
+
 //- Testimonial
+.dashed--right {
+	border-right: 2px dashed #BBBBBB; 
+}
+
 .testimonial--single {
-	@extend .mb-7;
 	@extend .p-2;
+
+	h1 {
+		font-size: 120px;
+		margin-bottom: -60px;
+	}
+}
+
+.testimonial--quote {
+	font-weight: bold;
 }
 
 //- Footer

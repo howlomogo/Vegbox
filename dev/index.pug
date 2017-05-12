@@ -5,11 +5,13 @@ html
 		include /_includes/_navigation
 
 		.hero-banner.text-center
+			img.section-mask(src="./assets/section-mask.svg")
+
 			.hero-banner--inner
-				.box--dashed
+				.box--dashed.mb-4
 					h1 TOP QUALITY FRUIT AND VEGETABLES
-					p DELIVERED STRAIGHT TO YOUR DOOR
-				button CHOOSE A BOX
+					h3 DELIVERED STRAIGHT TO YOUR DOOR
+				button.btn CHOOSE A BOX
 
 		section.section.text-center
 			.container
@@ -20,70 +22,76 @@ html
 				.row
 					.col-md-4
 						img.mw-100(src="./assets/hiw-box.svg")
-						p CHOOSE YOUR FLAVOUR AND DELIVERY OPTION
+						h3 CHOOSE YOUR FLAVOUR AND DELIVERY OPTION
 					.col-md-4
 						img.mw-100(src="./assets/hiw-truck.svg")
-						p WE DELIVER IT TO YOUR DOOR, FIRST CLASS POST
+						h3 WE DELIVER IT TO YOUR DOOR, FIRST CLASS POST
 					.col-md-4
 						img.mw-100(src="./assets/hiw-house.svg")
-						p YOU ENJOY TRULY GREAT BACON. AWESOME COOL!
+						h3 YOU ENJOY TRULY GREAT BACON. AWESOME COOL!
 
 
 
-		section.section.text-center(style="background-image: url('./assets/ordernow.jpg'); background-size: cover;")
+		section.section.x-pad.text-center(style="background-image: url('./assets/ordernow.jpg'); background-size: cover;")
+			img.section-mask(src="./assets/section-mask.svg")
+			img.section-mask.flipped(src="./assets/section-mask.svg")
+
 			.container
 				.row
 					.col-md-12
 						.box--dashed
-							h1 ORDER NOW AND RECIEVE 
-								span 50% OFF
+							h2 ORDER NOW AND RECIEVE 
+								span 50% OFF 
 								| YOUR FIRST BOX
-							P JUST START SHOPPING AND WE'LL APPLY YOUR DISCOUNT CODE FOR YOU
+							h4 JUST START SHOPPING AND WE'LL APPLY YOUR DISCOUNT CODE FOR YOU
 
 						button GET STARTED
 
 
-		section.section.text-center
+		section.section.text-center.our-boxes
 			.container
 				.row
 					.col-md-12
 						h1 OUR BOXES
-						p WE HAVE THREE BOXES TO CHOOSE FROM, FRUIT BOX, VEG BOX AND A MIX OF BOTH. ALL ARE GREAT CHOICES!
+						h4 WE HAVE THREE BOXES TO CHOOSE FROM, FRUIT BOX, VEG BOX AND A MIX OF BOTH. ALL ARE GREAT CHOICES!
 
 				.row
 					.col-md-4
-						div
-							p FRUIT BOX
+						.mb-6
+							h3 FRUIT BOX
 							img.mw-100(src="./assets/box1.jpg")
 							p Our classic box is packed with beautifully fresh produce and exciting new recipes - so you'll eat like a king!
 							button VIEW BOX
 					.col-md-4
-						div
-							p VEG BOX
+						.mb-6
+							h3 VEG BOX
 							img.mw-100(src="./assets/box2.jpg")
 							p Our classic box is packed with beautifully fresh produce and exciting new recipes - so you'll eat like a king!
 							button VIEW BOX
 
 					.col-md-4
-						div
-							p FRUIT &amp; VEG BOX
+						.mb-6
+							h3 FRUIT &amp; VEG BOX
 							img.mw-100(src="./assets/box3.jpg")
 							p Our classic box is packed with beautifully fresh produce and exciting new recipes - so you'll eat like a king!
 							button VIEW BOX
 
-				.row
+				.row.our-boxes--delivery
 					.col-md-12
-						img.mw-100(src="./assets/hiw-truck.svg")
-						p We OFFER FREE NEXT DAY DELIVERY ON ALL OF OUR BOXES!
+						img.our-boxes--truck(src="./assets/hiw-truck.svg")
+						h4 We OFFER FREE NEXT DAY DELIVERY ON ALL OF OUR BOXES!
 
 
-		section.section(style="background-image: url('./assets/mib-bg.jpg'); background-size: cover;")
+		section.section.x-pad(style="background-image: url('./assets/mib-bg.jpg'); background-size: cover; background-position: center;")
+			img.section-mask.flipped(src="./assets/section-mask.svg")
+			img.section-mask(src="./assets/section-mask.svg")
+
 			.container
 				.row
 					.col-md-6
 						.box--dashed
-							h1 MADE IN BRITAIN
-							p WE ONLY SUPPLY THE 
+							h2 MADE IN BRITAIN
+							h4 WE ONLY SUPPLY THE 
 								span BEST HOMEGROWN PRODUCE
 							p Lorem ipsum dolor sit amet, vel assum scripta luptatum an, mei an nisl nusquam partiendo. Et his ipsum maluisset, at autem platonem vis, decore nostrum in has.
 
@@ -98,22 +106,22 @@ html
 					.col-md-12
 						h1.mb-6 WHAT OUR CUSTOMERS SAY
 
-				.row
-					.col-md-4
+				.row.mb-7
+					.col-md-4.dashed--right
 						.testimonial--single
-							h1 "
-							p WONDERFUL FOOD, VERY FRESH AND SUBERB QUALITY, WOULD BUY AGAIN!
+							h1 “
+							h3.testimonial--quote WONDERFUL FOOD, VERY FRESH AND SUBERB QUALITY, WOULD BUY AGAIN!
 							p John Lennon
-					.col-md-4
+					.col-md-4.dashed--right
 						.testimonial--single
-							h1 "
-							p HANDS DOWN, THE BEST STEAK I HAVE EVER HAD! WOULD BUY AGAIN!
+							h1 “
+							h3.testimonial--quote HANDS DOWN, THE BEST STEAK I HAVE EVER HAD! WOULD BUY AGAIN!
 							p Bob Green
 
 					.col-md-4
 						.testimonial--single
-							h1 "
-							p BEST SMOKED GAMMON I HAVE EVER COOKED WITH, ITS MY FAVORITE!
+							h1 “
+							h3.testimonial--quote BEST SMOKED GAMMON I HAVE EVER COOKED WITH, ITS MY FAVORITE!
 							p Sally Robinson
 
 				.row.footer--social-links
