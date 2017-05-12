@@ -104,6 +104,11 @@ h4 {
 		top:0;
 		bottom: auto;
 	}
+
+	&.banner-mask {
+		top: 100 !important;
+		transform: scaleY(-1) scaleX(-1);
+	}
 }
 
 //- Navigation
@@ -133,7 +138,7 @@ h4 {
 	position: relative;
 	z-index:1;
 	background-color: #ffffff;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	// box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .hero-banner {
@@ -141,7 +146,7 @@ h4 {
 	height: 100vh;
 	min-height: 540px;
 	width: 100%;
-	background-image: url("../assets/banner-change.jpg");
+	background-image: url("../assets/banner.jpg");
 	background-size: cover;
 	background-position: center;
 	margin-top: -100px;
