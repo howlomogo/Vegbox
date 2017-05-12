@@ -27,6 +27,10 @@ p,a {
 		padding: 8px 42px 12px;
 	}
 
+	&.btn--secondary {
+		background-color: #FF9300;
+	}
+
 }
 
 .section {
@@ -55,6 +59,36 @@ p,a {
 	}
 }
 
+//- Navigation
+.navbar-nav {
+	.nav-item {
+		a.nav-link {
+			font-weight: bold;
+			font-size: 1.5rem;
+			padding: 1.5rem;
+		    -webkit-transition: color 0.5s;
+		    transition: color 0.5s;
+
+			@media (max-width: 992px) {
+				text-align: center;	
+			}
+		}
+	}
+}
+
+.navbar-toggler {
+	border: none;
+	cursor: pointer;
+	outline: none !important;
+}
+
+.navbar--container {
+	position: relative;
+	z-index:1;
+	background-color: #ffffff;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
 .hero-banner {
 	position: relative;
 	height: 100vh;
@@ -62,6 +96,7 @@ p,a {
 	background-image: url("../assets/banner-change.jpg");
 	background-size: cover;
 	background-position: center;
+	margin-top: -100px;
 
 	&--inner {
 		position: absolute;
@@ -165,7 +200,23 @@ p,a {
 
 //- Our Boxes
 .our-boxes {
+	h3 {
+		@extend .mb-3;
+		font-weight: bold;
+	}
 
+	img {
+		@extend .mb-4;
+	}
+
+	p {
+		@extend .px-2;
+		@extend .mb-4;
+		font-size: 0.9rem;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 300;
+		line-height: 20px;
+	}
 }
 
 .our-boxes--delivery {
