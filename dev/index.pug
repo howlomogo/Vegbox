@@ -8,19 +8,20 @@ html
 			img.section-mask(src="./assets/section-mask.svg")
 
 			.hero-banner--inner
-				.box--dashed.p-6.mb-4
+				.box--dashed.p-6.mb-4.animated.fadeIn
 					h1 TOP QUALITY FRUIT AND VEGETABLES
 					h3 DELIVERED STRAIGHT TO YOUR DOOR
-				button.btn CHOOSE A BOX
+				.hero-banner--button.animated.fadeIn
+					a.btn(href="#boxes") CHOOSE A BOX
 
 		section.section
 			.container
 				.row.text-center
 					.col-md-12
-						h1.mb-6 HOW IT WORKS
+						h1.mb-6.wow.fadeIn HOW IT WORKS
 
 				.row.align-items-end
-					.col-md-4.hiw-steps
+					.col-md-4.hiw-steps.wow.fadeInUp(data-wow-duration="1s")
 						.text-center
 							img.mw-100.mb-2(src="./assets/hiw-box.svg")
 
@@ -31,7 +32,7 @@ html
 								h3 CHOOSE WHICH BOX YOU'D LIKE TO ORDER
 
 
-					.col-md-4.hiw-steps
+					.col-md-4.hiw-steps.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.5s")
 						.text-center
 							img.mw-100.mb-2(src="./assets/hiw-truck.svg")
 						
@@ -42,7 +43,7 @@ html
 								h3 WE DELIVER IT FREE, FIRST CLASS POST
 
 
-					.col-md-4.hiw-steps
+					.col-md-4.hiw-steps.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="1s")
 						.text-center
 							img.mw-100.mb-2(src="./assets/hiw-house.svg")
 
@@ -54,44 +55,42 @@ html
 
 
 
-		section.section.x-pad.text-center(style="background-image: url('./assets/ordernow.jpg'); background-size: cover;")
+		section.section.x-pad.text-center(style="background-image: url('./assets/ordernow.jpg'); background-size: cover; background-position: center;")
 			img.section-mask(src="./assets/section-mask.svg")
 			img.section-mask.flipped(src="./assets/section-mask.svg")
 
+			.on--container.wow.fadeIn
+				.box--dashed.py-5.px-7.mb-4
+					h2.mb-2 ORDER NOW AND RECIEVE 
+						span.color--secondary 50% OFF 
+						| YOUR FIRST BOX
+					h4.mb-0 JUST START SHOPPING AND WE'LL APPLY YOUR DISCOUNT CODE FOR YOU
+
+				button.btn GET STARTED
+
+
+		section#boxes.section.text-center.our-boxes
 			.container
 				.row
 					.col-md-12
-						.box--dashed.p-5.mb-4
-							h2 ORDER NOW AND RECIEVE 
-								span.color--secondary 50% OFF 
-								| YOUR FIRST BOX
-							h4 JUST START SHOPPING AND WE'LL APPLY YOUR DISCOUNT CODE FOR YOU
-
-						button.btn GET STARTED
-
-
-		section.section.text-center.our-boxes
-			.container
-				.row
-					.col-md-12
-						h1 OUR BOXES
-						h4.mb-6 WE HAVE THREE BOXES TO CHOOSE FROM, FRUIT BOX, VEG BOX AND A MIX OF BOTH. ALL ARE GREAT CHOICES!
+						h1.wow.fadeIn OUR BOXES
+						h4.mb-6.wow.fadeIn(data-wow-delay="0.5s") WE HAVE THREE BOXES TO CHOOSE FROM, FRUIT BOX, VEG BOX AND A MIX OF BOTH. ALL ARE GREAT CHOICES!
 
 				.row
-					.col-md-4
+					.col-md-4.wow.fadeInUp(data-wow-duration="1s")
 						.mb-6.p-2
 							h3 FRUIT BOX
 							img.mw-100(src="./assets/box1.jpg")
 							p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
 							button.btn VIEW BOX
-					.col-md-4
+					.col-md-4.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.5s")
 						.mb-6.p-2
 							h3 VEG BOX
 							img.mw-100(src="./assets/box2.jpg")
 							p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
 							button.btn VIEW BOX
 
-					.col-md-4
+					.col-md-4.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="1s")
 						.mb-6.p-2
 							h3 FRUIT &amp; VEG BOX
 							img.mw-100(src="./assets/box3.jpg")
@@ -100,8 +99,8 @@ html
 
 				.row.our-boxes--delivery
 					.col-md-12
-						img.our-boxes--truck(src="./assets/hiw-truck.svg")
-						h4 We OFFER FREE NEXT DAY DELIVERY ON ALL OF OUR BOXES!
+						img.our-boxes--truck.wow.fadeInLeft(src="./assets/hiw-truck.svg")
+						h4.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.75s" data-wow-offset="100") We OFFER FREE NEXT DAY DELIVERY ON ALL OF OUR BOXES!
 
 
 		section.section.x-pad.mib(style="background-image: url('./assets/mib-bg.jpg'); background-size: cover; background-position: center;")
@@ -110,7 +109,7 @@ html
 
 			.container
 				.row
-					.col-md-6
+					.col-md-6.wow.fadeIn
 						.box--dashed.p-5.mb-4
 							h2 MADE IN BRITAIN
 							h4 WE ONLY SUPPLY THE 
@@ -128,23 +127,23 @@ html
 			.container
 				.row
 					.col-md-12
-						h1.mb-6 WHAT OUR CUSTOMERS SAY
+						h1.mb-6.wow.fadeIn WHAT OUR CUSTOMERS SAY
 
 				.row.mb-7
 					.col-md-4.dashed--right
-						.testimonial--single
+						.testimonial--single.wow.fadeInUp(data-wow-duration="1s")
 							h1 “
 
 							h3.testimonial--quote Best. Product. Ever! The Box is both attractive and highly adaptable.
 							p - John L
 					.col-md-4.dashed--right
-						.testimonial--single
+						.testimonial--single.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.5s")
 							h1 “
 							h3.testimonial--quote Thank you for making it pleasant and most of all hassle free!
 							p - Jessica G
 
 					.col-md-4
-						.testimonial--single
+						.testimonial--single.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="1s")
 							h1 “
 							h3.testimonial--quote Your company is truly upstanding and is behind its product 100%.
 							p - Sally R
