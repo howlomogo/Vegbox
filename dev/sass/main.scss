@@ -17,10 +17,15 @@ p,a {
 	border: none;
 	outline: none;
 	font-family: 'Amatica SC', cursive;
-	font-size: 28px;
+	font-size: 24px;
 	color: #ffffff;
 	line-height: normal;
 	padding: 8px 42px 12px;
+
+	&.btn--large {
+		font-size: 28px;
+		padding: 8px 42px 12px;
+	}
 
 }
 
@@ -74,10 +79,87 @@ p,a {
 }
 
 .box--dashed {
-	@extend .p-4;
 	background-color: rgba(255,255,255,0.9);
     outline: 2px dashed #BBBBBB;
     outline-offset: -8px;
+}
+
+//- How It Works
+.hiw-steps {
+
+	h1 {
+		color: #FF9300;
+		margin-bottom: 0px;
+	}
+
+	h3 {
+		font-weight: bold;
+		margin-bottom: 0px;
+	}
+
+	.media {
+		@extend .px-4;
+	}
+
+	@media (max-width: 768px) {
+
+		img {
+			max-width: 140px !important;
+			max-height: 100px !important;
+		}
+
+		h1 {
+			font-size: 84px;
+		}
+		h3 {
+			font-size: 1.75rem;
+			line-height: 34px;
+		}
+
+		.media {
+			max-width: 320px;
+			margin: 0px auto 48px;
+		}
+	}
+
+
+	@media (min-width: 768px) and (max-width: 991px) {
+		img {
+			max-width: 120px !important;
+			max-height: 90px !important;
+		}
+
+		.media {
+			padding: 0px !important;
+		}
+		h1 {
+			font-size: 78px;
+		}
+		h3 {
+			font-size: 1.4rem;
+			line-height: 30px;
+		}
+	}
+
+	@media (min-width: 992px) {
+		h1 {
+			font-size: 84px;
+		}
+		h3 {
+			font-size: 1.5rem;
+			line-height: 34px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		h1 {
+			font-size: 94px;
+		}
+		h3 {
+			font-size: 2rem;
+			line-height: 38px;
+		}
+	}
 }
 
 
@@ -96,7 +178,12 @@ p,a {
 
 //- Testimonial
 .dashed--right {
-	border-right: 2px dashed #BBBBBB; 
+	border-right: 2px dashed #BBBBBB;
+
+
+	@media (max-width: 768px) {
+		border-right: none;
+	}
 }
 
 .testimonial--single {

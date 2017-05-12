@@ -8,27 +8,49 @@ html
 			img.section-mask(src="./assets/section-mask.svg")
 
 			.hero-banner--inner
-				.box--dashed.mb-4
+				.box--dashed.p-6.mb-4
 					h1 TOP QUALITY FRUIT AND VEGETABLES
 					h3 DELIVERED STRAIGHT TO YOUR DOOR
 				button.btn CHOOSE A BOX
 
-		section.section.text-center
+		section.section
 			.container
-				.row
+				.row.text-center
 					.col-md-12
 						h1.mb-6 HOW IT WORKS
 
-				.row
-					.col-md-4
-						img.mw-100(src="./assets/hiw-box.svg")
-						h3 CHOOSE YOUR FLAVOUR AND DELIVERY OPTION
-					.col-md-4
-						img.mw-100(src="./assets/hiw-truck.svg")
-						h3 WE DELIVER IT TO YOUR DOOR, FIRST CLASS POST
-					.col-md-4
-						img.mw-100(src="./assets/hiw-house.svg")
-						h3 YOU ENJOY TRULY GREAT BACON. AWESOME COOL!
+				.row.align-items-end
+					.col-md-4.hiw-steps
+						.text-center
+							img.mw-100.mb-2(src="./assets/hiw-box.svg")
+
+						.media
+							.d-flex.align-self-center.mr-3
+								h1 1
+							.media-body.align-self-center.text-justify
+								h3 CHOOSE WHICH BOX YOU'D LIKE TO ORDER
+
+
+					.col-md-4.hiw-steps
+						.text-center
+							img.mw-100.mb-2(src="./assets/hiw-truck.svg")
+						
+						.media
+							.d-flex.align-self-center.mr-3
+								h1 2
+							.media-body.align-self-center.text-justify
+								h3 WE DELIVER IT FREE, FIRST CLASS POST
+
+
+					.col-md-4.hiw-steps
+						.text-center
+							img.mw-100.mb-2(src="./assets/hiw-house.svg")
+
+						.media
+							.d-flex.align-self-center.mr-3
+								h1 3
+							.media-body.align-self-center.text-justify
+								h3 YOU RECIEVE YOUR BOX IN 2 DAYS!
 
 
 
@@ -39,13 +61,13 @@ html
 			.container
 				.row
 					.col-md-12
-						.box--dashed
+						.box--dashed.p-5.mb-4
 							h2 ORDER NOW AND RECIEVE 
 								span 50% OFF 
 								| YOUR FIRST BOX
 							h4 JUST START SHOPPING AND WE'LL APPLY YOUR DISCOUNT CODE FOR YOU
 
-						button GET STARTED
+						button.btn GET STARTED
 
 
 		section.section.text-center.our-boxes
@@ -53,7 +75,7 @@ html
 				.row
 					.col-md-12
 						h1 OUR BOXES
-						h4 WE HAVE THREE BOXES TO CHOOSE FROM, FRUIT BOX, VEG BOX AND A MIX OF BOTH. ALL ARE GREAT CHOICES!
+						h4.mb-6 WE HAVE THREE BOXES TO CHOOSE FROM, FRUIT BOX, VEG BOX AND A MIX OF BOTH. ALL ARE GREAT CHOICES!
 
 				.row
 					.col-md-4
@@ -61,20 +83,20 @@ html
 							h3 FRUIT BOX
 							img.mw-100(src="./assets/box1.jpg")
 							p Our classic box is packed with beautifully fresh produce and exciting new recipes - so you'll eat like a king!
-							button VIEW BOX
+							button.btn VIEW BOX
 					.col-md-4
 						.mb-6
 							h3 VEG BOX
 							img.mw-100(src="./assets/box2.jpg")
 							p Our classic box is packed with beautifully fresh produce and exciting new recipes - so you'll eat like a king!
-							button VIEW BOX
+							button.btn VIEW BOX
 
 					.col-md-4
 						.mb-6
 							h3 FRUIT &amp; VEG BOX
 							img.mw-100(src="./assets/box3.jpg")
 							p Our classic box is packed with beautifully fresh produce and exciting new recipes - so you'll eat like a king!
-							button VIEW BOX
+							button.btn VIEW BOX
 
 				.row.our-boxes--delivery
 					.col-md-12
@@ -89,7 +111,7 @@ html
 			.container
 				.row
 					.col-md-6
-						.box--dashed
+						.box--dashed.p-4.mb-4
 							h2 MADE IN BRITAIN
 							h4 WE ONLY SUPPLY THE 
 								span BEST HOMEGROWN PRODUCE
@@ -97,7 +119,7 @@ html
 
 							p Id ancillae eleifend splendide vix, pri eu alia accusata neglegentur. In putant lobortis euripidis eos, eos at simul iuvaret.
 
-							button MORE INFO
+						button.btn MORE INFO
 
 
 		section.section.text-center
